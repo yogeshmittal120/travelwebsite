@@ -2,7 +2,7 @@
 	<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-4.jpg');?>">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-4.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">

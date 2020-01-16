@@ -2,13 +2,13 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-4.jpg');?>">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-4.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
 				   			<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
 				   				<div class="slider-text-inner text-center">
-				   					<h2>by colorlib.com</h2>
+				   					
 				   					<h1>Find Hotel</h1>
 				   				</div>
 				   			</div>
@@ -27,7 +27,7 @@
 							<div class="wrap-division">
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
-										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-1.jpg);">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
 											<p class="price"><span>$120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
@@ -41,7 +41,7 @@
 
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
-										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-2.jpg);">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>images/hotel-2.jpg');">
 											<p class="price"><span>$120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
@@ -69,7 +69,7 @@
 
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
-										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-4.jpg);">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>assets/images/hotel-4.jpg');">
 											<p class="price"><span>$120</span><small> /night</small></p>
 										</a>
 										<div class="desc">

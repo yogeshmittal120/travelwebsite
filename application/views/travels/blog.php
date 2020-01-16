@@ -2,7 +2,7 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(images/cover-img-2.jpg);">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-2.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -25,7 +25,7 @@
 					<div class="col-md-8">
 						<div class="wrap-division">
 							<article class="animate-box">
-								<div class="blog-img" style="background-image: url(images/blog-1.jpg);"></div>
+								<div class="blog-img" style="background-image: url('<?php echo base_url()?>assets/images/blog-1.jpg');"></div>
 								<div class="desc">
 									<div class="meta">
 										<p>
@@ -39,7 +39,7 @@
 								</div>
 							</article>
 							<article class="animate-box">
-								<div class="blog-img" style="background-image: url(images/blog-2.jpg);"></div>
+								<div class="blog-img" style="background-image: url('<?php echo base_url();?>assets/images/blog-2.jpg')"></div>
 								<div class="desc">
 									<div class="meta">
 										<p>
@@ -53,7 +53,7 @@
 								</div>
 							</article>
 							<article class="animate-box">
-								<div class="blog-img" style="background-image: url(images/blog-3.jpg);"></div>
+								<div class="blog-img" style="background-image: url('<?php echo base_url();?>assets/images/blog-3.jpg');"></div>
 								<div class="desc">
 									<div class="meta">
 										<p>
@@ -87,7 +87,7 @@
 								<h3 class="sidebar-heading">Recent Post</h3>
 								<div class="blog-entry-side">
 									<a href="blog.html" class="blog-post">
-										<span class="img" style="background-image: url(images/blog-3.jpg);"></span>
+										<span class="img" style="background-image: url('<?php echo base_url()?>assets/images/blog-3.jpg');"></span>
 										<div class="desc">
 											<span class="date">Feb 24, 2018</span>
 											<h3>Our Secret Island Boat Tour Is just for You</h3>

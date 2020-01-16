@@ -1,13 +1,13 @@
 <aside id="colorlib-hero">
 	<div class="flexslider">
 		<ul class="slides">
-			<li style="background-image: url(<?php echo base_url('assets/images/img_bg_3.jpg')?>">
+			<li style="background-image: url(<?php echo base_url('assets/images/img_bg_3.jpg')?>)">
 				<div class="overlay"></div>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
 							<div class="slider-text-inner text-center">
-								<h2>by colorlib.com</h2>
+							
 								<h1>Find Tours</h1>
 							</div>
 						</div>
@@ -25,7 +25,7 @@
 					<div class="wrap-division">
 						<div class="col-md-6 col-sm-6 animate-box">
 							<div class="tour">
-								<a href="tour-place.html" class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-1.jpg')?>;">
+								<a href="tour-place.html" class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-1.jpg')?>)">
 									<p class="price"><span>$1500</span> <small>/ 3 Days</small></p>
 								</a>
 								<span class="desc">

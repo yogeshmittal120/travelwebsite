@@ -60,4 +60,11 @@ class Travel extends CI_Controller {
 		$this->load->view('travels/services');
 		$this->load->view('travels/layout/footer');
 	}
+
+	public function card()
+	{
+		// $this->load->view('travels/layout/header');
+		$this->load->view('travels/activity/card');
+		// $this->load->view('travels/layout/footer');
+	}
 }

@@ -1,13 +1,13 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-3.jpg');?>">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-3.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
 				   			<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
-				   					<h2>by colorlib.com</h2>
+				   					<!-- <h2>by colorlib.com</h2> -->
 				   					<h1>Our Services</h1>
 				   				</div>
 				   			</div>
@@ -74,7 +74,7 @@
 						<div class="owl-carousel2">
 							<div class="item">
 								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person1.jpg');?>"></span>
+									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person1.jpg');?>)"></span>
 									<span class="user">Alysha Myers</span>
 									<small>Miami Florida, USA</small>
 									<blockquote>
@@ -84,7 +84,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person2.jpg');?>"></span>
+									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person2.jpg');?>)"></span>
 									<span class="user">James Fisher</span>
 									<small>New York, USA</small>
 									<blockquote>
@@ -94,7 +94,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person3.jpg');?>"></span>
+									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/person3.jpg');?>)"></span>
 									<span class="user">Jacob Webb</span>
 									<small>Athens, Greece</small>
 									<blockquote>
