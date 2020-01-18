@@ -78,24 +78,36 @@
 									<div class="form-field">
 										<i class="icon icon-arrow-down3"></i>
 										<select name="location" id="location" class="form-control">
-											<option value="Dubai">
-												Dubai
-											</option>
+											<?php if (!empty($place)) {
+												for ($i = 0; $i < count($place); $i++) {
+											?>
+													<option value="">
+														<?php echo $place[$i]['name'] ?>
+													</option>
+											<?php }
+											}
+											?>
 										</select>
 										<!-- <input type="text" id="location" class="form-control" placeholder="Search Location"> -->
 									</div>
 								</div>
-							
+
 							</div>
 							<div class="col-md-2">
 								<div class="form-group">
 									<label for="date">Activity:</label>
 									<div class="form-field">
-									<i class="icon icon-arrow-down3"></i>
-									<select name="location" id="location" class="form-control">
-											<option value="Dubai">
-												Dubai
-											</option>
+										<i class="icon icon-arrow-down3"></i>
+										<select name="location" id="location" class="form-control">
+											<?php if (!empty($tour)) {
+												for ($i = 0; $i < count($tour); $i++) {
+											?>
+													<option value="<?php echo $tour[$i]['id'] ?>">
+														<?php echo $tour[$i]['name'] ?>
+													</option>
+											<?php }
+											}
+											?>
 										</select>
 
 										<!-- <i class="icon icon-calendar2"></i>
@@ -103,7 +115,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-2">
+							<!-- <div class="col-md-2">
 								<div class="form-group">
 									<label for="date">Date:</label>
 									<div class="form-field">
@@ -126,7 +138,7 @@
 										</select>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="col-md-2">
 								<input type="submit" name="submit" id="submit" value="Find Activity" class="btn btn-primary btn-block">
 							</div>
@@ -263,7 +275,7 @@
 </div>
 </div>
 
-<div id="colorlib-services">
+<!-- <div id="colorlib-services">
 	<div class="container">
 		<div class="row no-gutters">
 			<div class="col-md-3 animate-box text-center aside-stretch">
@@ -304,7 +316,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div class="colorlib-tour colorlib-light-grey">
 	<div class="container">
@@ -316,91 +328,27 @@
 		</div>
 	</div>
 	<div class="tour-wrap">
+		<?php if(!empty($activity)){
+			for ($i=0; $i < count($activity) ; $i++) { 
+			?>
+		
 		<a href="#" class="tour-entry animate-box">
 			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-1.jpg') ?>)">
 			</div>
 			<span class="desc">
 				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Athens, Greece</h2>
+				<h2><?php echo $activity[$i]['name'] ?></h2>
 				<span class="city">Athens, Greece</span>
 				<span class="price">$450</span>
 			</span>
 		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-2.jpg') ?>);">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Thailand</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-3.jpg')?>);">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Philippines</h2>
-				<span class="city">Lipa, Philippines</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-4.jpg')?>);">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Greece</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assetsimages/tour-5.jpg'); ?>)">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Greece</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-6.jpg'); ?>)">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Greece</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-7.jpg') ?>)">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Greece</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/tour-8.jpg')?>);">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2>Family Tour in Greece</h2>
-				<span class="city">Athens, Greece</span>
-				<span class="price">$450</span>
-			</span>
-		</a>
+		<?php }}
+			?>
 	</div>
 </div>
 
 
-<div id="colorlib-blog">
+<!-- <div id="colorlib-blog">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
@@ -409,13 +357,13 @@
 			</div>
 		</div>
 		<div class="blog-flex">
-			<div class="f-entry-img" style="background-image: url(<?php echo base_url('assets/images/blog-3.jpg') ;?>)">
+			<div class="f-entry-img" style="background-image: url(<?php echo base_url('assets/images/blog-3.jpg'); ?>)">
 			</div>
 			<div class="blog-entry aside-stretch-right">
 				<div class="row">
 					<div class="col-md-12 animate-box">
 						<a href="blog.html" class="blog-post">
-							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-1.jpg');?>)"></span>
+							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-1.jpg'); ?>)"></span>
 							<div class="desc">
 								<span class="date">Feb 22, 2018</span>
 								<h3>A Definitive Guide to the Best Dining</h3>
@@ -435,7 +383,7 @@
 					</div>
 					<div class="col-md-12 animate-box">
 						<a href="blog.html" class="blog-post">
-							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-4.jpg')?>);"></span>
+							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-4.jpg') ?>);"></span>
 							<div class="desc">
 								<span class="date">Feb 22, 2018</span>
 								<h3>Our Secret Island Boat Tour Is just for You</h3>
@@ -447,9 +395,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
-<div id="colorlib-intro" class="intro-img" style="background-image: url(<?php echo base_url('assets/images/cover-img-1.jpg')?>);" data-stellar-background-ratio="0.5">
+<!-- <div id="colorlib-intro" class="intro-img" style="background-image: url(<?php echo base_url('assets/images/cover-img-1.jpg') ?>);" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">
@@ -484,7 +432,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div id="colorlib-hotel">
 	<div class="container">
@@ -499,7 +447,7 @@
 				<div class="owl-carousel">
 					<div class="item">
 						<div class="hotel-entry">
-							<a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-1.jpg);">
+							<a href="hotels.html" class="hotel-img" style="background-image: url(<?php echo base_url('assets/images/hotel-1.jpg') ?>);">
 								<p class="price"><span>$120</span><small> /night</small></p>
 							</a>
 							<div class="desc">
@@ -512,7 +460,7 @@
 					</div>
 					<div class="item">
 						<div class="hotel-entry">
-							<a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-2.jpg);">
+							<a href="hotels.html" class="hotel-img" style="background-image: url(<?php echo base_url('assets/images/hotel-2.jpg') ?>);">
 								<p class="price"><span>$120</span><small> /night</small></p>
 							</a>
 							<div class="desc">
@@ -525,7 +473,7 @@
 					</div>
 					<div class="item">
 						<div class="hotel-entry">
-							<a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-3.jpg);">
+							<a href="hotels.html" class="hotel-img" style="background-image: url(<?php echo base_url('assets/images/hotel-3.jpg') ?>);">
 								<p class="price"><span>$120</span><small> /night</small></p>
 							</a>
 							<div class="desc">
@@ -538,7 +486,7 @@
 					</div>
 					<div class="item">
 						<div class="hotel-entry">
-							<a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-4.jpg);">
+							<a href="hotels.html" class="hotel-img" style="background-image: url(<?php echo base_url('assets/images/hotel-4.jpg') ?>);">
 								<p class="price"><span>$120</span><small> /night</small></p>
 							</a>
 							<div class="desc">
@@ -566,43 +514,29 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 animate-box">
 				<div class="owl-carousel2">
-					<div class="item">
-						<div class="testimony text-center">
-							<span class="img-user" style="background-image: url(images/person1.jpg);"></span>
-							<span class="user">Alysha Myers</span>
-							<small>Miami Florida, USA</small>
-							<blockquote>
-								<p>" A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							</blockquote>
-						</div>
-					</div>
-					<div class="item">
-						<div class="testimony text-center">
-							<span class="img-user" style="background-image: url(images/person2.jpg);"></span>
-							<span class="user">James Fisher</span>
-							<small>New York, USA</small>
-							<blockquote>
-								<p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</blockquote>
-						</div>
-					</div>
-					<div class="item">
-						<div class="testimony text-center">
-							<span class="img-user" style="background-image: url(images/person3.jpg);"></span>
-							<span class="user">Jacob Webb</span>
-							<small>Athens, Greece</small>
-							<blockquote>
-								<p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-							</blockquote>
-						</div>
-					</div>
+					<?php if (!empty($testimonial)) {
+						for ($i = 0; $i < count($testimonial); $i++) {
+					?>
+							<div class="item">
+								<div class="testimony text-center">
+									<span class="img-user" style="background-image: url(<?php echo base_url() ?>assets/images/<?php echo $testimonial[$i]['image'] ?>"></span>
+									<span class="user"><?php echo $testimonial[$i]['name'] ?></span>
+									<small><?php echo $testimonial[$i]['address'] ?></small>
+									<blockquote>
+										<p><?php echo $testimonial[$i]['description']; ?></p>
+									</blockquote>
+								</div>
+
+							</div>
+					<?php }
+					} ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="colorlib-tour">
+<!-- <div class="colorlib-tour">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
@@ -776,4 +710,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

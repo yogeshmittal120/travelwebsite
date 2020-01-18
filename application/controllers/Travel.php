@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Travel extends CI_Controller {
-
+// public function __construct()
+// {
+// 	$this->load->model('CustomModel');
+// }
+	
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,8 +24,13 @@ class Travel extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['tour'] = $this->CustomModel->get('tour', 'name');
+		$data['place'] = $this->CustomModel->get('place');
+		$data['testimonial'] = $this->CustomModel->get('testimonial');
+		$data['activity'] = $this->CustomModel->selecLimit('tour',8);
+		// print_r($data);die;
 		$this->load->view('travels/layout/header');
-		$this->load->view('travels/index');
+		$this->load->view('travels/index',$data);
 		$this->load->view('travels/layout/footer');
 	}
 	public function about()

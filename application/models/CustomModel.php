@@ -8,6 +8,20 @@ class CustomModel extends ci_model
 		$result = $this->db->get($tableName)->result_array();
 
 		return $this->db->affected_rows() ? $result : FALSE;
+	}
+    public function get($table=null, $order_col=null)
+	{
+        $this->db->order_by($order_col, "asc");
+        $result = $this->db->get($table)->result_array();
+		return $this->db->affected_rows() ? $result : FALSE;
+
+    }
+    public function selecLimit($table=null, $limit=null, $order_col=null )
+	{
+        $this->db->order_by($order_col, "asc");
+        $result = $this->db->get($table,$limit)->result_array();
+		return $this->db->affected_rows() ? $result : FALSE;
+
     }
     
     public function selectAllFromWhere($tableName = null, $condition = null, $order_col = null)
@@ -21,4 +35,12 @@ class CustomModel extends ci_model
 			return FALSE; //$this->db->affected_rows()?$query[0][$query]:FALSE;
 		}
 	}
-}?>
+	
+	public function insertInto($tableName = null, $data = null)
+	{
+		$this->db->insert($tableName, $data);
+		$insert_id = $this->db->insert_id();
+		return $this->db->affected_rows() ? $insert_id : FALSE;
+	}
+}
+?>
