@@ -19,7 +19,7 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
@@ -73,10 +73,10 @@
 								<li class="has-dropdown">
 									<a href="<?php echo base_url('tours');?>">Tours</a>
 									<ul class="dropdown">
-										<li><a href="<?php echo base_url()?>Travel/card">Destination</a></li>
-										<li><a href="#">Cruises</a></li>
+										<li><a href="<?php echo base_url()?>Travel/card">Tour</a></li>
+										<!-- <li><a href="#">Cruises</a></li> -->
 										<li><a href="#">Hotels</a></li>
-										<li><a href="#">Booking</a></li>
+										<!-- <li><a href="#">Booking</a></li> -->
 									</ul>
 								</li>
 								<li><a href="<?php echo base_url('hotels');?>">Hotels</a></li>
