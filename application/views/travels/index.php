@@ -519,7 +519,7 @@
 					?>
 							<div class="item">
 								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(<?php echo base_url() ?>assets/images/<?php echo $testimonial[$i]['image'] ?>);"></span>
+									<span class="img-user" style="background-image: url(<?php echo base_url() ?>assets/images/<?php echo $testimonial[$i]['image'] ?>"></span>
 									<span class="user"><?php echo $testimonial[$i]['name'] ?></span>
 									<small><?php echo $testimonial[$i]['address'] ?></small>
 									<blockquote>
