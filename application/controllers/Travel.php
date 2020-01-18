@@ -63,8 +63,17 @@ class Travel extends CI_Controller {
 
 	public function card()
 	{
-		// $this->load->view('travels/layout/header');
-		$this->load->view('travels/activity/card');
-		// $this->load->view('travels/layout/footer');
+		$data['tour'] = $this->CustomModel->selectAll('tour', 'id');		
+		$this->load->view('travels/layout/header');
+		$this->load->view('travels/activity/card',$data);
+		$this->load->view('travels/layout/footer');
+	}
+
+	public function booking()
+	{
+		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');		
+		$this->load->view('travels/layout/header');
+		$this->load->view('travels/activity/booking');
+		$this->load->view('travels/layout/footer');
 	}
 }

@@ -1,107 +1,231 @@
-<!DOCTYPE HTML>
-<html>
+<aside id="colorlib-hero">
+    <div class="flexslider">
+        <ul class="slides">
+            <li style="background-image: url(<?php echo base_url('assets/images/img_bg_3.jpg') ?>)">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                            <div class="slider-text-inner text-center">
+                                <h1 style="margin-bottom:0">Dubai</h1>
+                                <h3 style="color:white!important;font-weight:300">Top Holiday Experiences</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</aside>
+<style>
+    h3 {
+        color: #333 !important;
+    }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tour Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    .text-danger {
+        color: #DC3545 !important;
+    }
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    .text-warning {
+        color: #FFC107 !important;
+    }
 
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    .text-primary {
+        color: #007BFF !important;
+    }
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css'); ?>">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css'); ?>">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
+    .text-info {
+        color: #17A2B8 !important;
+    }
 
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css'); ?>">
+    .table {
+        margin-bottom: 0px !important;
+    }
 
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/flexslider.css'); ?>">
+    .table tbody tr select {
+        height: 24px;
+        background: white;
+        border: 0.5px solid rgba(0, 0, 0, 0.6);
+    }
 
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.default.min.css'); ?>">
+    .table tbody tr input[type="date"] {
+        color: black;
+        border: 0.5px solid rgba(0, 0, 0, 0.6);
+    }
 
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.css'); ?>">
-    <!-- Flaticons  -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/fonts/flaticon/font/flaticon.css'); ?>">
+    .table thead th i {
+        float: right;
+    }
 
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+    .table tbody td i {
+        float: right;
+    }
 
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/mystyle.css'); ?>">
+    label {
+        font-weight: 400 !important;
+        font-size: 12px;
+    }
 
-    <!-- Modernizr JS -->
-    <script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js'); ?>"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    input[type='number'] {
+        height: 22px;
+        width: 55px;
+        background: white;
+        padding: 0px 5px;
+    }
 
-</head>
+    input[type='date'] {
+        width: 141px;
+    }
+</style>
+<div class="container" style="background: #EBEEF2;display: block;float: left;width: 100%;padding:10px">
+    <?php if (!empty($tour)) {
+        for ($i = 0; $i < count($tour); $i++) { ?>
+            <div class="card row">
+                <img class="card-img-top col-sm-4 p-0" src="<?php echo base_url() ?>assets/images/person1.jpg" alt="Card image" style='height:220px;width:20%'>
+                <div class="card-body col-sm-8 card-right" style="width:80%">
+                    <div class="row p-0 m-0">
+                        <div class="left col-sm-7 p-0">
+                            <div>
+                                <h3 class="card-title fw-600 mb-8"><?php echo $tour[$i]['name'] ?></h3>
+                                <p class="m-0 stars"><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                                <p class="card-text stars m-0">
+                                    <i class="fas fa-check-square"><span> Instant Confirmation</span></i>
+                                    <i class="fas fa-check-square"><span> Free Cancellation 48hrs Prior</span></i>
+                                </p>
+                            </div>
+                            <div class="row <?php echo strlen($tour[$i]['name']) > '33' ? '' : 'pt-25' ?> m-0 info_links" id="modal_open">
+                                <div class="col-sm-2"><i class="fas fa-file-alt text-danger"></i>
+                                    <p class="m-0">Description</p>
+                                </div>
+                                <div class="col-sm-2"><i class="fas fa-list text-warning"></i>
+                                    <p class="m-0">Inclusions</p>
+                                </div>
+                                <div class="col-sm-2"><i class="fas fa-clock text-primary"></i>
+                                    <p class="m-0">Timings</p>
+                                </div>
+                                <div class="col-sm-2"><i class="fas fa-info-circle text-info"></i>
+                                    <p class="m-0">Useful Info</p>
+                                </div>
 
-<body>
-    <!-- <div class="row">
-    <div class="col-sm-4"><div class="blog-img" style="background-image: url('<?php echo base_url(); ?>assets/images/blog-3.jpg');"></div></div>
-    <div class="col-sm-8 bg-blue"></div>
-</div> -->
-    <div class="container bg-success py-2">
-        <div class="card">
-            <h5 class="card-header">Featured</h5>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="middle col-sm-3 p-0">
+                            <div class="middle-align">
+                                <button type="button" class="btn btn-primary bg-warning"><i class="fas fa-envelope"></i> Add to flyer</button>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-heart"></i> Add Wishlist</button>
+                            </div>
+                        </div>
+                        <div class="right col-sm-2 p-0">
+                            <div>
+                                <h3 class="fw-600 mb-5">AED 56</h3>
+                                <p>per person</p>
+                                <p class="m-0" style="line-height:12.5px;color:#6C757D">Duration</p>
+                                <p>6 Days</p>
+                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo<?php echo $i ?>">Select</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+            <div id="demo<?php echo $i ?>" class="collapse container p-10 collapse-card">
+                <div class="p-10-5 bg_dark">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tour Option <i class="fas fa-info-circle text-warning"></i></th>
+                                <th>Transfer Option <i class="fas fa-info-circle text-warning"></i></th>
+                                <th class="w-50">Tour Date <i class="fas fa-info-circle text-warning"></i></th>
+                                <th>Adult</th>
+                                <th>Child <p style="margin:0px;font-size:9px">(2-12Yrs)</p>
+                                </th>
+                                <th>Infant <p style="margin:0px;font-size:9px">(0-2Yrs)</p>
+                                </th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $subActivity = $this->CustomModel->selectAllFromWhere('tour_activity', array('tp_id' => $tour[$i]['id']), 'id');
+                            for ($j = 0; $j < count($subActivity); $j++) {
+                            ?>
+                                <tr>
+                                    <td id="<?php echo $subActivity[$j]['id'] ?>" pid="<?php echo base64_encode($tour[$i]['id']) ?>">
+                                        <div class="form-group form-check m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" name='activities' type="checkbox"><?php echo $subActivity[$j]['activity'] ?>
+                                            </label>
+                                            <i class="fas fa-info-circle text-warning"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <select class="form-control p-0" id="sel1">
+                                                <option>With Transfer</option>
+                                                <option>Without Transfer</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="date" name="date">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" class="form-control" name="adult" id="adult" required>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" class="form-control" name="child" id="adult">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" class="form-control" name="infant" id="adult">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        AED 0.00
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                    <button type="button" id="book" book-btn class="btn btn-primary book_btn right mt-25">Book Now</button>
+                </div>
+            </div>
+    <?php }
+    } ?>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header row m-0">
+                <h4 class="modal-title col-sm-11" id="heading">Modal Heading</h4>
+                <button type="button" class="close col-sm-1" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div> -->
+
         </div>
     </div>
-
-    <div class="card">
-
-    </div>
+</div>
 
 
-        <!-- jQuery -->
-        <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
-        <!-- jQuery Easing -->
-        <script src="<?php echo base_url('assets/js/jquery.easing.1.3.js'); ?>"></script>
-        <!-- Bootstrap -->
-        <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-        <!-- Waypoints -->
-        <script src="<?php echo base_url('assets/js/jquery.waypoints.min.js'); ?>"></script>
-        <!-- Flexslider -->
-        <script src="<?php echo base_url('assets/js/jquery.flexslider-min.js'); ?>"></script>
-        <!-- Owl carousel -->
-        <script src="<?php echo base_url('assets/js/owl.carousel.min.js'); ?>"></script>
-        <!-- Magnific Popup -->
-        <script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js'); ?>"></script>
-        <script src="<?php echo base_url('assets/js/magnific-popup-options.js'); ?>"></script>
-        <!-- Date Picker -->
-        <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js'); ?>"></script>
-        <!-- Stellar Parallax -->
-        <script src="<?php echo base_url('assets/js/jquery.stellar.min.js'); ?>"></script>
-        <!-- Main -->
-        <script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
-
-</body>
-
-</html>

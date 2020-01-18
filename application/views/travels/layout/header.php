@@ -47,9 +47,15 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<!-- Custom style  -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/mystyle.css');?>">
 	<!-- Modernizr JS -->
 	<script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js');?>"></script>
 	<!-- FOR IE9 below -->
+
+	<!-- jQuery -->
+	<script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->

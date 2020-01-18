@@ -83,9 +83,9 @@
 					<div class="col-md-12 text-center">
 						<p>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://gennextit.com" target="_blank"> Gennextit</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
-							<span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+							
 						</p>
 					</div>
 				</div>
@@ -97,8 +97,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
 	
-	<!-- jQuery -->
-	<script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
+	
 	<!-- jQuery Easing -->
 	<script src="<?php echo base_url('assets/js/jquery.easing.1.3.js');?>"></script>
 	<!-- Bootstrap -->
@@ -118,6 +117,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="<?php echo base_url('assets/js/jquery.stellar.min.js');?>"></script>
 	<!-- Main -->
 	<script src="<?php echo base_url('assets/js/main.js');?>"></script>
+	<!-- Booking tour -->
+	<script src="<?php echo base_url('assets/js/booking.js');?>"></script>
 
 	</body>
 </html>
