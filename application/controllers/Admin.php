@@ -28,7 +28,7 @@ class Admin extends CI_Controller
         $data['package'] = $this->CustomModel->get('tour_activity', 'activity');
 
         $this->load->view('admin/layout/header');
-        $this->load->view('admin/tourpackages',$data);
+        $this->load->view('admin/tourpackages', $data);
         $this->load->view('admin/layout/footer');
     }
 
@@ -107,9 +107,9 @@ class Admin extends CI_Controller
 
             $place = json_encode($places);
 
-        //         echo $place;
-        // die;
-    
+            //         echo $place;
+            // die;
+
 
             $data = array(
                 'activity' => $this->input->post('Tour_Name'),
@@ -195,4 +195,6 @@ class Admin extends CI_Controller
         $this->session->sess_destroy();
         redirect('Admin/index');
     }
+
+    
 }

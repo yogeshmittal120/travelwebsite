@@ -31,7 +31,7 @@ class Travel extends CI_Controller {
 		// print_r($data);die;
 		$this->load->view('travels/layout/header');
 		$this->load->view('travels/index',$data);
-		$this->load->view('travels/layout/footer');
+		$this->load->view('travels/layout/footer',$data);
 	}
 	public function about()
 	{
@@ -83,6 +83,19 @@ class Travel extends CI_Controller {
 		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');		
 		$this->load->view('travels/layout/header');
 		$this->load->view('travels/activity/booking');
+		$this->load->view('travels/layout/footer');
+	}
+
+	public function LinkactivityPost()
+	{
+		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');	
+		echo "<pre>";		
+		print_r($_POST);
+
+		$tour_id=$this->input->post('tour_id');
+
+		$this->load->view('travels/layout/header');
+		// $this->load->view('travels/activity/booking');
 		$this->load->view('travels/layout/footer');
 	}
 }

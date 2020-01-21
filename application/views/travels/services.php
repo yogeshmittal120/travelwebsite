@@ -1,13 +1,13 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-3.jpg');?>)">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/img4.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
 				   			<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
-				   					<!-- <h2>by colorlib.com</h2> -->
+				   					
 				   					<h1>Our Services</h1>
 				   				</div>
 				   			</div>
