@@ -1,4 +1,4 @@
-<div id="colorlib-subscribe" style="background-image: url(<?php echo base_url('assets/images/img_bg_2.jpg');?>);" data-stellar-background-ratio="0.5">
+<div id="colorlib-subscribe" style="background-image: url(<?php echo base_url('assets/images/cf.jpg');?>);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -72,8 +72,8 @@
 					<div class="col-md-3 col-md-push-1">
 						<h4>Contact Information</h4>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+							<li>XXX-XXX, <br>Dubai</li>
+							<li><a href="tel://1234567920">+ 000-000-000</a></li>
 							<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
 							<li><a href="#">yoursite.com</a></li>
 						</ul>

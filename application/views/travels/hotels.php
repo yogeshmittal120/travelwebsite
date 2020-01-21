@@ -2,7 +2,7 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(<?php echo base_url('assets/images/cover-img-4.jpg');?>)">
+			   	<li style="background-image: url(<?php echo base_url('assets/images/dubaihotel.jpg');?>)">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -28,13 +28,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -42,13 +42,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>images/hotel-2.jpg');">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -56,13 +56,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-3.jpg);">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -70,13 +70,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url('<?php echo base_url();?>assets/images/hotel-4.jpg');">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -84,13 +84,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-5.jpg);">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -98,13 +98,13 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-6.jpg);">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+											<h3><a href="hotel-room.html">Lorem Ipsum</a></h3>
+											<span class="place">Lorem Ipsum</span>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
 										</div>
 									</div>
 								</div>
@@ -112,12 +112,12 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-7.jpg);">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
 											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
-											<span class="place">New York, USA</span>
+											<span class="place">Hotel Edison</span>
 											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 										</div>
 									</div>
@@ -126,7 +126,7 @@
 								<div class="col-md-6 col-sm-6 animate-box">
 									<div class="hotel-entry">
 										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-8.jpg);">
-											<p class="price"><span>$120</span><small> /night</small></p>
+											<p class="price"><span>AED120</span><small> /night</small></p>
 										</a>
 										<div class="desc">
 											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
@@ -325,10 +325,10 @@
 										   <div class="form-check">
 												<input type="checkbox" class="form-check-input" id="exampleCheck1">
 												<label class="form-check-label" for="exampleCheck1">
-													<h4 class="place">Greece</h4>
+													<h4 class="place">Dubai</h4>
 												</label>
 										   </div>
-										   <div class="form-check">
+										   <!-- <div class="form-check">
 										      <input type="checkbox" class="form-check-input" id="exampleCheck1">
 										      <label class="form-check-label" for="exampleCheck1">
 													<h4 class="place">Italy</h4>
@@ -351,7 +351,7 @@
 										      <label class="form-check-label" for="exampleCheck1">
 													<h4 class="place">Japan</h4>
 												</label>
-										   </div>
+										   </div> -->
 										</form>
 									</div>
 								</div>
@@ -385,12 +385,12 @@
 													<h4 class="place">Swimming Pool</h4>
 												</label>
 										   </div>
-										   <div class="form-check">
+										   <!-- <div class="form-check">
 										      <input type="checkbox" class="form-check-input" id="exampleCheck1">
 										      <label class="form-check-label" for="exampleCheck1">
 													<h4 class="place">Japan</h4>
 												</label>
-										   </div>
+										   </div> -->
 										</form>
 									</div>
 								</div>

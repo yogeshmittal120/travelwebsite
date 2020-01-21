@@ -1,7 +1,7 @@
 <aside id="colorlib-hero">
     <div class="flexslider">
         <ul class="slides">
-            <li style="background-image: url(<?php echo base_url('assets/images/img_bg_3.jpg') ?>)">
+            <li style="background-image: url(<?php echo base_url('assets/images/Dubai-City-Tour.jpg') ?>)">
                 <div class="overlay"></div>
                 <div class="container-fluid">
                     <div class="row">
@@ -81,7 +81,7 @@
     <?php if (!empty($tour)) {
         for ($i = 0; $i < count($tour); $i++) { ?>
             <div class="card row">
-                <img class="card-img-top col-sm-4 p-0" src="<?php echo base_url() ?>assets/images/person1.jpg" alt="Card image" style='height:220px;width:20%'>
+                <img class="card-img-top col-sm-4 p-0" src="<?php echo base_url() ?>assets/images/Burj-Khalifa.jpg" alt="Card image" style='height:220px;width:20%'>
                 <div class="card-body col-sm-8 card-right" style="width:80%">
                     <div class="row p-0 m-0">
                         <div class="left col-sm-7 p-0">
