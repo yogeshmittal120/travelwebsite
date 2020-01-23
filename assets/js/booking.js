@@ -7,6 +7,11 @@
 
 $('.info_links').on('click','div[details]',function(){
     let tour_id = atob($(this).attr('pid'));    
+    window.location = base_url+'Travel/booking/'+tour_id+'#details'
+})
+
+$('.info_links').on('click','div[useful_info]',function(){
+    let tour_id = atob($(this).attr('pid'));    
     window.location = base_url+'Travel/booking/'+tour_id+'#useful_info'
 })
 

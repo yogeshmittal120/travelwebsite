@@ -107,7 +107,7 @@
                                 <div class="col-sm-2"><i class="fas fa-clock text-primary"></i>
                                     <p class="m-0">Timings</p>
                                 </div>
-                                <div class="col-sm-2"><i class="fas fa-info-circle text-info"></i>
+                                <div class="col-sm-2" useful_info pid="<?php echo base64_encode($tour[$i]['id']) ?>"><i class="fas fa-info-circle text-info"></i>
                                     <p class="m-0">Useful Info</p>
                                 </div>
 
