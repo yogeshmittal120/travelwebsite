@@ -1,11 +1,60 @@
 //************************************************* Tour booking ***************************************/
-$('#modal_open div i').click(function () {
-    let heading = $(this).siblings().text();
-    $('#heading').text(heading)
-    $("#myModal").modal()
+// $('#modal_open div i').click(function () {
+//     let heading = $(this).siblings().text();
+//     $('#heading').text(heading)
+//     $("#myModal").modal()
+// })
+
+$('.info_links').on('click','div[details]',function(){
+    let tour_id = atob($(this).attr('pid'));    
+    window.location = base_url+'Travel/booking/'+tour_id+'#useful_info'
 })
 
-//getting selected sub Activities data
+//show and hide fill details tab on input box click
+$("#booknow .sub_activity").on('click','.checked',function(){
+    if ($(this).prop('checked') == true){    
+        $('#fill_details').show()
+    }
+})
+
+//getting and validating sub activity data from booking view
+$("#booking").click(function(){
+    var somethingChecked = false;
+    $("input[type=checkbox]").each(function() {
+      if($(this).is(':checked')) {
+        somethingChecked = true;
+      }
+    });
+    if(!somethingChecked) {
+        showAlert('Please select any activity')
+    }else{
+        let parentId = atob($('.sub_activity div:first').attr('pid'));
+        let subActivityId = [];
+        let transfer = $('#transfer').val();
+        let date = $('.date').val().trim();
+        let adult = $('#adult').val().trim();
+        let child = $('#child').val().trim();
+        let infant = $('#infant').val().trim();
+        if(date == ""){
+            showAlert("Date should not be empty", 'danger');
+            return false
+        }
+        if(adult == ""){
+            showAlert("Adult number should not be empty", 'danger');
+            return false
+        }
+        $("input[type=checkbox]").each(function() {
+            if($(this).is(':checked')) {
+                subActivityId.push($(this).parent().parent().attr('id'))
+            }
+          });          
+        
+    }
+
+   
+})
+
+//getting selected sub Activities data from card view
 
 let transfer = [];
 let t_date = [];
@@ -48,3 +97,4 @@ $('.bg_dark').on('click', 'button[book-btn]', function () {
     console.log(infants)
     console.log(tbalance)
 })
+

@@ -70,7 +70,7 @@ class Travel extends CI_Controller {
 		$this->load->view('travels/layout/footer');
 	}
 
-	public function card()
+	public function package()
 	{
 		$data['tour'] = $this->CustomModel->selectAll('tour', 'id');		
 		$this->load->view('travels/layout/header');
@@ -78,24 +78,34 @@ class Travel extends CI_Controller {
 		$this->load->view('travels/layout/footer');
 	}
 
-	public function booking()
+	public function booking($id)
 	{
-		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');		
+		
+		$data['tour'] = $this->CustomModel->selectAllFromWhere('tour', array('id' => $id)); 
 		$this->load->view('travels/layout/header');
-		$this->load->view('travels/activity/booking');
+		$this->load->view('travels/activity/booking',$data);
 		$this->load->view('travels/layout/footer');
 	}
 
-	public function LinkactivityPost()
+	public function ticket()
 	{
-		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');	
-		echo "<pre>";		
-		print_r($_POST);
-
-		$tour_id=$this->input->post('tour_id');
-
+		
+		// $data['tour'] = $this->CustomModel->selectAllFromWhere('tour', array('id' => $id));
 		$this->load->view('travels/layout/header');
-		// $this->load->view('travels/activity/booking');
+		$this->load->view('travels/activity/ticket');
 		$this->load->view('travels/layout/footer');
 	}
+
+	// public function LinkactivityPost()
+	// {
+	// 	// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');	
+	// 	echo "<pre>";		
+	// 	print_r($_POST);
+
+	// 	$tour_id=$this->input->post('tour_id');
+
+	// 	$this->load->view('travels/layout/header');
+	// 	// $this->load->view('travels/activity/booking');
+	// 	$this->load->view('travels/layout/footer');
+	// }
 }

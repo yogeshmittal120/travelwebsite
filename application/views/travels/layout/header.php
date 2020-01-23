@@ -21,7 +21,8 @@
 	<meta name="twitter:card" content="" />
 	<!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
 	<!-- Icomoon Icon Fonts-->
@@ -56,10 +57,15 @@
 
 	<!-- jQuery -->
 	<script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap-notify.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/MyScriptLibrary.js');?>"></script>
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	
+	<script>
+	const base_url = "<?php echo base_url()?>"
+	</script>
 	</head>
 	<body>
 		

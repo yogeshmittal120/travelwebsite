@@ -80,7 +80,7 @@
 <div class="container" style="background: #EBEEF2;display: block;float: left;width: 100%;padding:10px">
     <?php if (!empty($tour)) {
         for ($i = 0; $i < count($tour); $i++) { ?>
-            <div class="card row">
+            <div class="card row" id="<?php echo $tour[$i]['name'] ?>">
                 <img class="card-img-top col-sm-4 p-0" src="<?php echo base_url() ?>assets/images/Burj-Khalifa.jpg" alt="Card image" style='height:220px;width:20%'>
                 <div class="card-body col-sm-8 card-right" style="width:80%">
                     <div class="row p-0 m-0">
@@ -97,7 +97,8 @@
                                 </p>
                             </div>
                             <div class="row <?php echo strlen($tour[$i]['name']) > '33' ? '' : 'pt-25' ?> m-0 info_links" id="modal_open">
-                                <div class="col-sm-2"><i class="fas fa-file-alt text-danger"></i>
+                                <div class="col-sm-2" details pid="<?php echo base64_encode($tour[$i]['id']) ?>">
+                                    <i class="fas fa-file-alt text-danger"></i>
                                     <p class="m-0">Description</p>
                                 </div>
                                 <div class="col-sm-2"><i class="fas fa-list text-warning"></i>
@@ -150,6 +151,7 @@
                         </thead>
                         <tbody>
                             <?php $subActivity = $this->CustomModel->selectAllFromWhere('tour_activity', array('tp_id' => $tour[$i]['id']), 'id');
+                            if(!empty($subActivity)){
                             for ($j = 0; $j < count($subActivity); $j++) {
                             ?>
                                 <tr>
@@ -171,29 +173,71 @@
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="date" name="date">
+                                            <input type="text" class="date" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="number" class="form-control" name="adult" id="adult" required>
+                                            <input type="number" placeholder="0" class="form-control" min=0 name="adult" id="adult" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="number" class="form-control" name="child" id="adult">
+                                            <input type="number" placeholder="0" class="form-control" min=0  name="child" id="adult">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="number" class="form-control" name="infant" id="adult">
+                                            <input type="number" placeholder="0" class="form-control" min=0 name="infant" id="adult">
                                         </div>
                                     </td>
                                     <td>
                                         AED 0.00
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php } }else{?>
+                                <tr>
+                                    <td id="<?php echo $subActivity[$j]['id'] ?>" pid="<?php echo base64_encode($tour[$i]['id']) ?>">
+                                        <div class="form-group form-check m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" name='activities' type="checkbox"> <?php echo $tour[$i]['name'] ?>
+                                            </label>
+                                            <i class="fas fa-info-circle text-warning"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <select class="form-control p-0" id="sel1">
+                                                <option>With Transfer</option>
+                                                <option>Without Transfer</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="text" class="date" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" placeholder="0" class="form-control" min=0 name="adult" id="adult" required>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" placeholder="0" class="form-control" min=0  name="child" id="adult">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group m-0">
+                                            <input type="number" placeholder="0" class="form-control" min=0 name="infant" id="adult">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        AED 0.00
+                                    </td>
+                                </tr>
+                            <?php }?>
                         </tbody>
                     </table>
                     <button type="button" id="book" book-btn class="btn btn-primary book_btn right mt-25">Book Now</button>

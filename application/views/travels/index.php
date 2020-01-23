@@ -100,7 +100,7 @@
 											<?php if (!empty($tour)) {
 												for ($i = 0; $i < count($tour); $i++) {
 											?>
-													<option class="" value="<?php echo $tour[$i]['id'] ?>">
+													<option class="" value="<?php echo $tour[$i]['name'] ?>">
 														<?php echo $tour[$i]['name'] ?>
 													</option>
 											<?php }
@@ -138,7 +138,7 @@
 								</div>
 							</div> -->
 							<div class="col-md-2">
-								<input type="submit" id="submit" value="Find Activity" class="btn btn-primary btn-block">
+								<input type="button" id="submit" value="Find Activity" class="btn btn-primary btn-block">
 							</div>
 						</div>
 					</form>
@@ -444,3 +444,14 @@
 	</div>
 </div>
 
+<script>
+$('#submit').click(()=>{
+	let activity = $('#activityid').val().trim()
+	if(activity != ""){
+		window.location = "<?php echo base_url('Travel/package#')?>"+activity
+	}else{
+		alert('Please select any Activity')
+	}
+	
+})
+</script>

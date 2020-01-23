@@ -281,7 +281,7 @@
 	var datePicker = function() {
 		// jQuery('#time').timepicker();
 		jQuery('.date').datepicker({
-		  'format': 'm/d/yyyy',
+		  'format': 'dd/mm/yyyy',
 		  'autoclose': true
 		});
 	};
