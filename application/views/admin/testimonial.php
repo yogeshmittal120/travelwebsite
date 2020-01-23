@@ -14,7 +14,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="#">Dashboard</a></li>
                             <li><a href="#">Tour</a></li>
-                            <li class="active">Packages</li>
+                            <li class="active">Testimonial</li>
                         </ol>
                     </div>
                 </div>
@@ -30,34 +30,32 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Tour</strong> <span class="offset-1"> <a href="<?php echo base_url() ?>Admin/tourpackages"><i class="fa fa-plus text-success" title="Add Testimonial"></i></a></span>
+                        <strong class="card-title">Testimonial</strong> <span class="offset-1"> <a href="<?php echo base_url()?>Admin/addtestimonial"><i class="fa fa-plus text-success" title="Add Testimonial"></i></a></span>
                     </div>
                     <div class="card-body">
-                        <table id="package" class="table table-striped table-bordered">
+                        <table id="testimonial" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Tour</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <!-- <th>Description</th> -->
                                     <th>Images</th>
-                                    <!-- <th>Images</th>
-                                    <th>Time Slots</th> -->
                                     <th>Action</th>
+                              
                                 </tr>
                             </thead>
                             <tbody>
 
-                                <?php 
-                                
-                                // print_r($package);
-                                if (!empty($package)) {
+                            <?php if(!empty($testimonial)){
 
-                                    for ($i = 0; $i < count($package); $i++) { ?>
-                                        <tr>
-                                            <td><?php echo $package[$i]['name'] ?></td>
-                                            <td><?php echo $package[$i]['image'] ?></td>
-                                            <!-- <td><?php echo $package[$i]['image_name'] ?></td>
-                                    <td><?php echo $package[$i]['time_slots'] ?></td> -->
-                                            <td><a href="<?php echo base_url('Admin/edittourpackages/').base64_encode($package[$i]['id'])?>"><i class="fa fa-edit edittour" title="Edit"></i></a> <i class="fa fa-trash deleteTour" title="Delete" attr="<?php echo base64_encode($package[$i]['id']);?>"></i></td>
-                                        </tr>
+                                for ($i=0; $i <count($testimonial) ; $i++) { ?>
+                               <tr>
+                                    <td><?php echo $testimonial[$i]['name']?></td>
+                                    <td><?php echo $testimonial[$i]['address']?></td>
+                                    <!-- <td><?php echo $testimonial[$i]['description']?></td> -->
+                                    <td><?php echo $testimonial[$i]['image']?></td>
+                                    <td><a href="<?php echo base_url('Admin/editTestimonial/').base64_encode($testimonial[$i]['id'])?>"><i class="fa fa-edit" title="Edit"></a></i> <a href="<?php echo base_url('Admin/deleteTestimonial/').base64_encode($testimonial[$i]['id'])?>"><i class="fa fa-trash" title="Delete"></i></a> </td>
+                                </tr>
                                 <?php }
                                 } ?>
                             </tbody>
@@ -73,10 +71,8 @@
 </div><!-- .content -->
 
 
-<script src="<?php echo base_url() ?>adminassets/assets/js/main.js"></script>
+
 <!-- <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
-<script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
-<script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
@@ -92,6 +88,8 @@
 
 <script>
     $(document).ready(function() {
-        $('#package').dataTable();
+        $('#testimonial').DataTable({
+            
+        });
     });
 </script>

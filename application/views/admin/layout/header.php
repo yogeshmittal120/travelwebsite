@@ -35,7 +35,23 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <!-- for multiselect -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- for Datatable -->
+    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    
+    <script src="<?php echo base_url() ?>adminassets/assets/js/customstyle.js"></script>
+
+    <!-- for show alert -->
+    <!-- <script src="<?php echo base_url() ?>adminassets/assets/js/jquery.min.js"></script> -->
+    <script src="<?php echo base_url() ?>adminassets/assets/js/bootstrap-notify.min.js"></script>
+    <script src="<?php echo base_url() ?>adminassets/assets/js/MyScriptLibrary.js"></script>
+   
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" /> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
 
 
 
@@ -92,24 +108,20 @@
                     <li class="active">
                         <a href="<?php echo base_url() ?>Admin/Administration"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
+                    <li class="menu-title">Add Tour Packages</li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Packages</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-table"></i><a href="<?php echo base_url() ?>Admin/Administration">Packages</a></li>
-                            <li><i class="fa fa-table"></i><a href="<?php echo base_url() ?>Admin/Administration">Activity</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?php echo base_url() ?>Admin/activity">Activity</a></li>
                         </ul>
                     </li>
-                    <li class="menu-title">Add Tour Packages</li><!-- /.menu-title -->
+                    <!-- /.menu-title -->
+                    <li class="menu-title">Add Testimonial</li><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tour</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="<?php echo base_url() ?>Admin/tourpackages">Add Tour packages</a></li>
-                            <li><i class="fa fa-table"></i><a href="<?php echo base_url() ?>Admin/addActivity">Add Tour Activity</a></li>
-                        </ul>
+                        <a href="<?php echo base_url() ?>Admin/testimonial"> <i class="menu-icon fa fa-table"></i>Testimonial</a>
                     </li>
-                   
-                    
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

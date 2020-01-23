@@ -57,7 +57,7 @@ class Contact extends CI_Controller
         // $email = base64_decode($email); 
 
         if (isset($_POST)) {
-            $to = "nileshwephyre@gmail.com";
+            $to = "nilesh.gautam@gennextit.com";
             $subject = 'Responces from Website' . $this->input->post('subject');
             $from = $this->input->post('email');
             $msg = $this->input->post('message');
@@ -75,10 +75,10 @@ class Contact extends CI_Controller
 
             $config = array(
                 'protocol' => 'smtp',
-                'smtp_host' => 'ssl://smtp.gmail.com',
-                'smtp_port' => '465',
-                'smtp_user' => 'nileshwephyre@gmail.com',
-                'smtp_pass' => 'gautam@1990',
+                'smtp_host' => SMTP_HOST,
+                'smtp_port' => SMTP_PORT,
+                'smtp_user' => SMTP_EMAIL_FROM,
+                'smtp_pass' => SMTP_EMAIL_PASS,
                 'mailtype'  => 'html',
                 'charset'   => 'iso-8859-1'
             );
@@ -109,4 +109,6 @@ class Contact extends CI_Controller
             }
         }
     }
+
+    
 }

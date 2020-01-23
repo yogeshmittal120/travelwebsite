@@ -88,14 +88,14 @@ class Travel extends CI_Controller {
 
 	public function LinkactivityPost()
 	{
-		// $data['tour'] = $this->CustomModel->selectAll('tour', 'id');	
-		echo "<pre>";		
-		print_r($_POST);
-
 		$tour_id=$this->input->post('tour_id');
+		$data['tour'] = $this->CustomModel->selectActivity($tour_id);
+		echo "<pre>";
+		print_r($data);
 
-		$this->load->view('travels/layout/header');
+		// $tour_id=$this->input->post('tour_id');
+		// $this->load->view('travels/layout/header');
 		// $this->load->view('travels/activity/booking');
-		$this->load->view('travels/layout/footer');
+		// $this->load->view('travels/layout/footer');
 	}
 }
