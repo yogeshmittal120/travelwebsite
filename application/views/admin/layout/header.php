@@ -38,6 +38,7 @@
 
     <!-- for Datatable -->
     <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.css');?>">
 
     
     <script src="<?php echo base_url() ?>adminassets/assets/js/customstyle.js"></script>

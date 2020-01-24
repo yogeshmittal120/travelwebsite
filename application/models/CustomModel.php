@@ -56,27 +56,25 @@ class CustomModel extends ci_model
 	{
 		// $this->db->delete($table, array('id' => $id));
 		$this->db->where($condition);
-		$result=$this->db->delete($table);
-		if(!empty($result)){
+		$result = $this->db->delete($table);
+		if (!empty($result)) {
 			return false;
-		}
-		else{
+		} else {
 			return true;
 		}
 	}
 
 	// function to update records into the database
 
-	public function update_table($table = null, $condition = null, $data=null)
+	public function update_table($table = null, $condition = null, $data = null)
 	{
 		$this->db->set($data);
 		$this->db->where($condition);
-		$result=$this->db->update($table);
-		
-		if(!empty($result)){
+		$result = $this->db->update($table);
+
+		if (!empty($result)) {
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}

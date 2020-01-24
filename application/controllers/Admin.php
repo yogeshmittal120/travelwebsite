@@ -3,6 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Admin extends CI_Controller
 {
+    // public function __construct()
+	// {
+	// 	parent::__construct();
+
+	// 	date_default_timezone_set("Asia/Kolkata"); //Set server date an time to Asia
+	// 	if (!isset($_SESSION['userInfo'])) {
+	// 		redirect('index');
+	// 	}
+	// }
 
 
     public function index()
@@ -47,10 +56,11 @@ class Admin extends CI_Controller
                     redirect('Admin/users');
                     // access login for qc1
                 } else {
-                    echo $this->session->set_flashdata('msg', "Username or Password is Incorrect");
+                    echo $this->session->set_flashdata('error', "Username or Password is Incorrect");
                     redirect('Admin/index');
                 }
             } else {
+                $this->session->set_flashdata('error', "Invalid entry");
                 redirect('Admin/index');
             }
         }
@@ -451,6 +461,7 @@ class Admin extends CI_Controller
     function logout()
     {
         $this->session->sess_destroy();
+        // $this->session->unset_userdata($array_items);
         redirect('Admin/index');
     }
 }

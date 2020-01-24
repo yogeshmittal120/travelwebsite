@@ -70,7 +70,7 @@
                                 <div class="col col-md-3"><label for="datevalid_to" class=" form-control-label">Valid To</label></div>
                                 <div class="col-12 col-md-9"> <input type="date" id="datevalid_to" value="<?php if (isset($tour_package)) {
                                                                                                                 print_r($tour_package[0]['valid_to']);
-                                                                                                            } ?>" name="valid_to" placeholder="Text" class="form-control"></div>
+                                                                                                            } ?>" name="valid_to" placeholder="Text" class="form-control date"></div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="selectplace" class=" form-control-label">Select Tour Place </label></div>
@@ -139,7 +139,7 @@
                                         <label for="inline-Status" class="form-check-label ">
                                             <input type="radio" id="inline-Status" name="status" checked='<?php if (isset($tour_package[0]['status'])) {
                                                                                                         echo 'checked';
-                                                                                                    } ?>' class="form-check-input">Activate
+                                                                                                    } else{echo "checked";} ?>' class="form-check-input">Activate
                                         </label>
                                         <label for="inline-Status1" class="form-check-label ">
                                             <input type="radio" id="inline-Status1" name="status" checked='<?php if (isset($tour_package[0]['status'])) {
