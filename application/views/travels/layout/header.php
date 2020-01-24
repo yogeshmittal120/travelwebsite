@@ -85,7 +85,7 @@
 								<li class="has-dropdown">
 									<a href="<?php echo base_url('tours');?>">Tours</a>
 									<ul class="dropdown">
-										<li><a href="<?php echo base_url()?>Travel/card">Activity</a></li>
+										<li><a href="<?php echo base_url()?>Travel/package">Activity</a></li>
 										<!-- <li><a href="#">Cruises</a></li> -->
 										<!-- <li><a href="#">Hotels</a></li> -->
 										<!-- <li><a href="#">Booking</a></li> -->
