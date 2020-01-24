@@ -157,7 +157,7 @@
 									<label for="date">Check-in:</label>
 									<div class="form-field">
 										<i class="icon icon-calendar2"></i>
-										<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+										<input type="text" id="date" class="form-control date" placeholder="Check-in date" style="height:50px !important">
 									</div>
 								</div>
 							</div>
@@ -166,7 +166,7 @@
 									<label for="date">Check-out:</label>
 									<div class="form-field">
 										<i class="icon icon-calendar2"></i>
-										<input type="text" id="date" class="form-control date" placeholder="Check-out date">
+										<input type="text" id="date" class="form-control date" placeholder="Check-out date" style="height:50px !important">
 									</div>
 								</div>
 							</div>
