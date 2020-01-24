@@ -73,9 +73,12 @@
 </div><!-- .content -->
 
 
+<<<<<<< HEAD
 <script src="<?php echo base_url() ?>adminassets/assets/js/main.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
+=======
+>>>>>>> Nilesh_branch
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/datatables.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>adminassets/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
