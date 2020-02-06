@@ -47,7 +47,6 @@
                             <tbody>
 
                             <?php if(!empty($testimonial)){
-
                                 for ($i=0; $i <count($testimonial) ; $i++) { ?>
                                <tr>
                                     <td><?php echo $testimonial[$i]['name']?></td>
@@ -59,7 +58,6 @@
                                 <?php }
                                 } ?>
                             </tbody>
-
                         </table>
                     </div>
                 </div>

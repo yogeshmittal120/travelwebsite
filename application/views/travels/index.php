@@ -56,8 +56,10 @@
 		</ul>
 	</div>
 </aside>
-<div id="colorlib-reservation">
-	<!-- <div class="container"> -->
+
+<!-- <div class="container"> -->
+<!-- <div id="colorlib-reservation">
+
 	<div class="row">
 		<div class="search-wrap">
 			<div class="container">
@@ -68,13 +70,13 @@
 			</div>
 			<div class="tab-content">
 				<div id="activity" class="tab-pane fade in active">
-					<form method="post" action="<?php echo base_url()?>Travel/LinkactivityPost" class="colorlib-form">
+					<form method="post" action="<?php echo base_url() ?>Travel/LinkactivityPost" class="colorlib-form">
 						<div class="row">
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="date">Where:</label>
 									<div class="form-field">
-										<!-- <i class="icon icon-arrow-down3"></i> -->
+										<!-- <i class="icon icon-arrow-down3"></i>
 										<select name="location" id="location" class="form-control">
 											<?php if (!empty($place)) {
 												for ($i = 0; $i < count($place); $i++) {
@@ -86,7 +88,7 @@
 											}
 											?>
 										</select>
-										<!-- <input type="text" id="location" class="form-control" placeholder="Search Location"> -->
+										<!-- <input type="text" id="location" class="form-control" placeholder="Search Location"> 
 									</div>
 								</div>
 
@@ -95,13 +97,13 @@
 								<div class="form-group">
 									<label for="date">Activity:</label>
 									<div class="form-field">
-										<!-- <i class="icon icon-arrow-down3"></i> -->
+										<!-- <i class="icon icon-arrow-down3"></i> 
 										<select name="tour_id" id="activityid" class="form-control">
 											<?php if (!empty($tour)) {
 												for ($i = 0; $i < count($tour); $i++) {
 											?>
-													<option class="" value="<?php echo $tour[$i]['name'] ?>">
-														<?php echo $tour[$i]['name'] ?>
+													<option class="" value="<?php echo base64_encode($tour[$i]['id']) ?>">
+														<?php echo $tour[$i]['activity'] ?>
 													</option>
 											<?php }
 											}
@@ -109,36 +111,13 @@
 										</select>
 
 										<!-- <i class="icon icon-calendar2"></i>
-										<input type="text" id="date" class="form-control date" placeholder="Check-in date"> -->
+										<input type="text" id="date" class="form-control date" placeholder="Check-in date">
 									</div>
 								</div>
 							</div>
-							<!-- <div class="col-md-2">
-								<div class="form-group">
-									<label for="date">Date:</label>
-									<div class="form-field">
-										<i class="icon icon-calendar2"></i>
-										<input type="text" id="date" class="form-control date" placeholder="Check-out date">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-									<label for="guests">Guest</label>
-									<div class="form-field">
-										<i class="icon icon-arrow-down3"></i>
-										<select name="people" id="people" class="form-control">
-											<option value="#">1</option>
-											<option value="#">2</option>
-											<option value="#">3</option>
-											<option value="#">4</option>
-											<option value="#">5+</option>
-										</select>
-									</div>
-								</div>
-							</div> -->
+
 							<div class="col-md-2">
-								<input type="button" id="submit" value="Find Activity" class="btn btn-primary btn-block">
+								<input type="button" id="submit" value="Find Activity" class="btn btn-primary btn-block" style="margin-top:40px;">
 							</div>
 						</div>
 					</form>
@@ -186,7 +165,7 @@
 								</div>
 							</div>
 							<div class="col-md-2">
-								<input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
+								<input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block" style="margin-top:40px;">
 							</div>
 						</div>
 					</form>
@@ -194,165 +173,47 @@
 			</div>
 		</div>
 	</div>
-</div>
-</div>
-
-<!-- <div id="colorlib-services">
-	<div class="container">
-		<div class="row no-gutters">
-			<div class="col-md-3 animate-box text-center aside-stretch">
-				<div class="services">
-					<span class="icon">
-						<i class="flaticon-around"></i>
-					</span>
-					<h3>Amazing Travel</h3>
-					<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
-				</div>
-			</div>
-			<div class="col-md-3 animate-box text-center">
-				<div class="services">
-					<span class="icon">
-						<i class="flaticon-boat"></i>
-					</span>
-					<h3>Our Cruises</h3>
-					<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
-				</div>
-			</div>
-			<div class="col-md-3 animate-box text-center">
-				<div class="services">
-					<span class="icon">
-						<i class="flaticon-car"></i>
-					</span>
-					<h3>Book Your Trip</h3>
-					<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
-				</div>
-			</div>
-			<div class="col-md-3 animate-box text-center">
-				<div class="services">
-					<span class="icon">
-						<i class="flaticon-postcard"></i>
-					</span>
-					<h3>Nice Support</h3>
-					<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies</p>
-				</div>
-			</div>
-		</div>
-	</div>
 </div> -->
+
+
 
 <div class="colorlib-tour colorlib-light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-				<h2>Popular Destination</h2>
+				<h2>Popular Activity</h2>
 				<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			</div>
 		</div>
 	</div>
-	<div class="tour-wrap">
-		<?php if(!empty($activity)){
-			for ($i=0; $i < count($activity) ; $i++) { 
-			?>
-		
-		<a href="#" class="tour-entry animate-box">
-			<div class="tour-img" style="background-image: url(<?php echo base_url('assets/images/activity.jpg') ?>)">
-			</div>
-			<span class="desc">
-				<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-				<h2><?php echo $activity[$i]['name'] ?></h2>
-				<span class="city"><?php echo $activity[$i]['place'] ?></span>
-				<span class="price">AED450</span>
-			</span>
-		</a>
-		<?php }}
-			?>
-	</div>
-</div>
-<!-- <div id="colorlib-blog">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-				<h2>Recent Blog</h2>
-				<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-			</div>
-		</div>
-		<div class="blog-flex">
-			<div class="f-entry-img" style="background-image: url(<?php echo base_url('assets/images/blog-3.jpg'); ?>)">
-			</div>
-			<div class="blog-entry aside-stretch-right">
-				<div class="row">
-					<div class="col-md-12 animate-box">
-						<a href="blog.html" class="blog-post">
-							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-1.jpg'); ?>)"></span>
-							<div class="desc">
-								<span class="date">Feb 22, 2018</span>
-								<h3>A Definitive Guide to the Best Dining</h3>
-								<span class="cat">Activities</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-12 animate-box">
-						<a href="blog.html" class="blog-post">
-							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-2.jpg') ?>);"></span>
-							<div class="desc">
-								<span class="date">Feb 22, 2018</span>
-								<h3>How These 5 People Found The Path to Their Dream Trip</h3>
-								<span class="cat">Activities</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-12 animate-box">
-						<a href="blog.html" class="blog-post">
-							<span class="img" style="background-image: url(<?php echo base_url('assets/images/blog-4.jpg') ?>);"></span>
-							<div class="desc">
-								<span class="date">Feb 22, 2018</span>
-								<h3>Our Secret Island Boat Tour Is just for You</h3>
-								<span class="cat">Activities</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 
-<!-- <div id="colorlib-intro" class="intro-img" style="background-image: url(<?php echo base_url('assets/images/cover-img-1.jpg') ?>);" data-stellar-background-ratio="0.5">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 animate-box">
-				<div class="intro-desc">
-					<div class="text-salebox">
-						<div class="text-lefts">
-							<div class="sale-box">
-								<div class="sale-box-top">
-									<h2 class="number">45</h2>
-									<span class="sup-1">%</span>
-									<span class="sup-2">Off</span>
-								</div>
-								<h2 class="text-sale">Sale</h2>
-							</div>
-						</div>
-						<div class="text-rights">
-							<h3 class="title">Just hurry up limited offer!</h3>
-							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary">Book Now</a> <a href="#" class="btn btn-primary btn-outline">Read more</a></p>
-						</div>
+	<!-- <?php 
+	echo '<pre>';
+	print_r($activity); 
+	?> -->
+	<div class="tour-wrap">
+		<?php if (!empty($activity)) {
+
+			for ($i = 0; $i < count($activity); $i++) {
+				$amt = json_decode($activity[$i]['amt'], true);
+				// print_r($amt);
+		?> <a href="#" class="tour-entry animate-box">
+					<div class="tour-img" style="background-image: url(<?php echo base_url('upload/').$activity[$i]['image_name']?>)">
 					</div>
-				</div>
-			</div>
-			<div class="col-md-6 animate-box">
-				<div class="video-wrap">
-					<div class="video colorlib-video" style="background-image: url(images/img_bg_2.jpg);">
-						<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
-						<div class="video-overlay"></div>
-					</div>
-				</div>
-			</div>
-		</div>
+					<span class="desc">
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<h2><?php echo $activity[$i]['activity'] ?></h2>
+						<span class="city"><?php echo $activity[$i]['duration'] ?></span>
+						<span class="price">AED <?php echo $amt['Adult'] ?></span>
+					</span>
+				</a>
+		<?php }
+		}
+		?>
 	</div>
-</div> -->
+
+
+</div>
 
 <div id="colorlib-hotel">
 	<div class="container">
@@ -365,7 +226,7 @@
 		<div class="row">
 			<div class="col-md-12 animate-box">
 				<div class="owl-carousel">
-					
+
 					<div class="item">
 						<div class="hotel-entry">
 							<a href="hotels.html" class="hotel-img" style="background-image: url(<?php echo base_url('assets/images/hotel-2.jpg') ?>);">
@@ -411,7 +272,7 @@
 	</div>
 </div>
 
-<div id="colorlib-testimony" class="colorlib-light-grey">
+<!-- <div id="colorlib-testimony" class="colorlib-light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
@@ -425,14 +286,13 @@
 					<?php if (!empty($testimonial)) {
 						for ($i = 0; $i < count($testimonial); $i++) {
 					?>
-
 							<div class="item">
 								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/').$testimonial[$i]['image']; ?>);"></span>
+									<span class="img-user" style="background-image: url(<?php echo base_url('assets/images/') . $testimonial[$i]['image']; ?>);"></span>
 									<span class="user"><?php echo $testimonial[$i]['name'] ?></span>
 									<small><?php echo $testimonial[$i]['address'] ?></small>
 									<blockquote>
-										<p><?php echo $testimonial[$i]['description']?></p>
+										<p><?php echo $testimonial[$i]['description'] ?></p>
 									</blockquote>
 								</div>
 							</div>
@@ -445,13 +305,14 @@
 </div>
 
 <script>
-$('#submit').click(()=>{
-	let activity = $('#activityid').val().trim()
-	if(activity != ""){
-		window.location = "<?php echo base_url('Travel/package#')?>"+activity
-	}else{
-		alert('Please select any Activity')
-	}
-	
-})
-</script>
+	$('#submit').click(() => {
+		let activity = $('#activityid').val().trim()
+		// console.log(activity);
+		if (activity != "") {
+			// window.location = "<?php echo base_url('Travel/package#') ?>"+activity
+			window.location = "<?php echo base_url('Travel/bookactivity/') ?>" + activity
+		} else {
+			alert('Please select any Activity')
+		}
+	})
+</script> -->

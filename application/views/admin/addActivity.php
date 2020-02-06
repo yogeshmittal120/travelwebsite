@@ -66,7 +66,7 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="Duration" class=" form-control-label">Duration</label></div>
-                                <div class="col-12 col-md-9"><input type="text" value="<?php if(isset($activity)){echo $activity[0]['duration'];}?>" id="Duration" name="Duration" placeholder="duraion" class="form-control" required></div>
+                                <div class="col-12 col-md-9"><input type="text" value="<?php if(isset($activity)){echo $activity[0]['duration'];}?>" id="Duration" name="Duration" placeholder="Duration" class="form-control" required></div>
                             </div>
                
                             <div class="row form-group">

@@ -30,7 +30,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Tour Activity</strong><span class="offset-1"> <a href="<?php echo base_url() ?>Admin/addActivity"><i class="fa fa-plus text-success" title="Add Testimonial"></i></a></span>
+                        <strong class="card-title">Tour Activity</strong><span class="offset-1"> <a href="<?php echo base_url() ?>Admin/addActivity"><i class="fa fa-plus text-success" title="Add Activity"></i></a></span>
                     </div>
                     <div class="card-body">
                         <table id="package" class="table table-striped table-bordered">

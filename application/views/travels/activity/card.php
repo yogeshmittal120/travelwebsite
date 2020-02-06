@@ -17,7 +17,7 @@
         </ul>
     </div>
 </aside>
-<style>
+<style> 
     h3 {
         color: #333 !important;
     }
@@ -125,7 +125,8 @@
                                 <p>per person</p>
                                 <p class="m-0" style="line-height:12.5px;color:#6C757D">Duration</p>
                                 <p>6 Days</p>
-                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo<?php echo $i ?>">Select</button>
+                                <!-- <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo<?php echo $i ?>">Select</button> -->
+                                <a href="<?php echo base_url('Travel/tour_booking/').$tour[$i]['id'].'#details' ?>" class="btn btn-success " select pid="" >Select</a>
                             </div>
                         </div>
 
@@ -133,7 +134,7 @@
                 </div>
             </div>
 
-            <div id="demo<?php echo $i ?>" class="collapse container p-10 collapse-card">
+            <!-- <div id="demo<?php echo $i ?>" class="collapse container p-10 collapse-card">
                 <div class="p-10-5 bg_dark">
                     <table class="table">
                         <thead>
@@ -151,51 +152,52 @@
                         </thead>
                         <tbody>
                             <?php $subActivity = $this->CustomModel->selectAllFromWhere('tour_activity', array('tp_id' => $tour[$i]['id']), 'id');
-                            if(!empty($subActivity)){
-                            for ($j = 0; $j < count($subActivity); $j++) {
+                            if (!empty($subActivity)) {
+                                for ($j = 0; $j < count($subActivity); $j++) {
                             ?>
-                                <tr>
-                                    <td id="<?php echo $subActivity[$j]['id'] ?>" pid="<?php echo base64_encode($tour[$i]['id']) ?>">
-                                        <div class="form-group form-check m-0">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" name='activities' type="checkbox"><?php echo $subActivity[$j]['activity'] ?>
-                                            </label>
-                                            <i class="fas fa-info-circle text-warning"></i>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group m-0">
-                                            <select class="form-control p-0" id="sel1">
-                                                <option>With Transfer</option>
-                                                <option>Without Transfer</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group m-0">
-                                            <input type="text" class="date" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group m-0">
-                                            <input type="number" placeholder="0" class="form-control" min=0 name="adult" id="adult" required>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group m-0">
-                                            <input type="number" placeholder="0" class="form-control" min=0  name="child" id="adult">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group m-0">
-                                            <input type="number" placeholder="0" class="form-control" min=0 name="infant" id="adult">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        AED 0.00
-                                    </td>
-                                </tr>
-                            <?php } }else{?>
+                                    <tr>
+                                        <td id="<?php echo $subActivity[$j]['id'] ?>" pid="<?php echo base64_encode($tour[$i]['id']) ?>">
+                                            <div class="form-group form-check m-0">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" name='activities' type="checkbox"><?php echo $subActivity[$j]['activity'] ?>
+                                                </label>
+                                                <i class="fas fa-info-circle text-warning"></i>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group m-0">
+                                                <select class="form-control p-0" id="sel1">
+                                                    <option>With Transfer</option>
+                                                    <option>Without Transfer</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group m-0">
+                                                <input type="text" class="date" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group m-0">
+                                                <input type="number" placeholder="0" class="form-control" min=0 name="adult" id="adult" required>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group m-0">
+                                                <input type="number" placeholder="0" class="form-control" min=0 name="child" id="adult">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group m-0">
+                                                <input type="number" placeholder="0" class="form-control" min=0 name="infant" id="adult">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            AED 0.00
+                                        </td>
+                                    </tr>
+                                <?php }
+                            } else { ?>
                                 <tr>
                                     <td id="<?php echo $subActivity[$j]['id'] ?>" pid="<?php echo base64_encode($tour[$i]['id']) ?>">
                                         <div class="form-group form-check m-0">
@@ -215,7 +217,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="text" class="date" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
+                                            <input type="text" class="date txtDate" placeholder="dd/mm/yyyy" name="date" style="height:25px !important;padding:0 8px">
                                         </div>
                                     </td>
                                     <td>
@@ -225,7 +227,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group m-0">
-                                            <input type="number" placeholder="0" class="form-control" min=0  name="child" id="adult">
+                                            <input type="number" placeholder="0" class="form-control" min=0 name="child" id="adult">
                                         </div>
                                     </td>
                                     <td>
@@ -237,39 +239,14 @@
                                         AED 0.00
                                     </td>
                                 </tr>
-                            <?php }?>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <button type="button" id="book" book-btn class="btn btn-primary book_btn right mt-25">Book Now</button>
                 </div>
-            </div>
+            </div> -->
     <?php }
     } ?>
-</div>
-
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header row m-0">
-                <h4 class="modal-title col-sm-11" id="heading">Modal Heading</h4>
-                <button type="button" class="close col-sm-1" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                Modal body..
-            </div>
-
-            <!-- Modal footer -->
-            <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div> -->
-
-        </div>
-    </div>
 </div>
 
 

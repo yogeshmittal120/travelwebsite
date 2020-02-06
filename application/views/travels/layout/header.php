@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tour Template</title>
@@ -9,12 +10,12 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
 	<meta name="twitter:title" content="" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
@@ -24,82 +25,85 @@
 
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css'); ?>">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css'); ?>">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css'); ?>">
 
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/flexslider.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/flexslider.css'); ?>">
 
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css');?>">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.default.min.css');?>">
-	
-	<!-- Date Picker -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.css');?>">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/fonts/flaticon/font/flaticon.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.default.min.css'); ?>">
 
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.css'); ?>">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/fonts/flaticon/font/flaticon.css'); ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Custom style  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/mystyle.css');?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/mystyle.css'); ?>">
 	<!-- Modernizr JS -->
-	<script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js'); ?>"></script>
 	<!-- FOR IE9 below -->
 
 	<!-- jQuery -->
-	<script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
-	<script src="<?php echo base_url('assets/js/bootstrap-notify.min.js');?>"></script>
-	<script src="<?php echo base_url('assets/js/MyScriptLibrary.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap-notify.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/MyScriptLibrary.js'); ?>"></script>
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	
-	<script>
-	const base_url = "<?php echo base_url()?>"
-	</script>
-	</head>
-	<body>
-		
-	<div class="colorlib-loader"></div>
 
+	<script>
+		const base_url = "<?php echo base_url() ?>"
+	</script>
+</head>
+
+<body>
+
+	<div class="colorlib-loader"></div>
 	<div id="page">
 		<nav class="colorlib-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="<?php echo base_url('index');?>">Tour</a></div>
+							<div id="colorlib-logo"><a href="<?php echo base_url('index'); ?>">Tour</a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="<?php echo base_url('index');?>">Home</a></li>
-								<li class="has-dropdown">
-									<a href="<?php echo base_url('tours');?>">Tours</a>
+								<li class="active"><a href="<?php echo base_url('index'); ?>">Home</a></li>
+								<!-- <li class="has-dropdown">
+									<a href="#">Tours</a>
 									<ul class="dropdown">
-										<li><a href="<?php echo base_url()?>Travel/package">Activity</a></li>
-										<!-- <li><a href="#">Cruises</a></li> -->
-										<!-- <li><a href="#">Hotels</a></li> -->
-										<!-- <li><a href="#">Booking</a></li> -->
+										<!-- <li><a href="<?php echo base_url() ?>Travel/activity">Activity</a></li>
+										<li><a href="<?php echo base_url() ?>Travel/package">Tour Packages</a></li> 
+										<!-- <li><a href="#">Cruises</a></li>
+										<!-- <li><a href="#">Hotels</a></li>
+										<!-- <li><a href="#">Booking</a></li>
 									</ul>
-								</li>
-								<li><a href="<?php echo base_url('hotels');?>">Hotels</a></li>
-								<li><a href="<?php echo base_url('services');?>">Services</a></li>
-								<li><a href="<?php echo base_url('blog');?>">Blog</a></li>
-								<li><a href="<?php echo base_url('about');?>">About</a></li>
-								<li><a href="<?php echo base_url('contact');?>">Contact</a></li>
+								</li> -->
+								<li><a href="<?php echo base_url('hotels'); ?>">Hotels</a></li>
+								<!-- <li><a href="<?php echo base_url('services'); ?>">Services</a></li> -->
+								<li><a href="<?php echo base_url() ?>Travel/activity">Activity</a></li>
+								<li><a href="<?php echo base_url() ?>Travel/package">Tour</a></li>
+								<!-- <--<li><a href="<?php echo base_url('blog'); ?>">Blog</a></li> --> 
+								<li><a href="<?php echo base_url('about'); ?>">About</a></li>
+								<li><a href="<?php echo base_url('contact'); ?>">Contact</a></li>
+								<li><a href="<?php echo base_url('Travel/billingCart'); ?>">Cart</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
-	

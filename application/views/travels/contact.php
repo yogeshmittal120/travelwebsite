@@ -58,7 +58,6 @@
 							<div class="form-group text-center">
 								<input type="submit" value="Send Message" class="btn btn-primary">
 							</div>
-
 						</form>		
 					</div>
 					<div class="col-md-10 col-md-offset-1 animate-box">

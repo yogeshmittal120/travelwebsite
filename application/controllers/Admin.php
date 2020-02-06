@@ -4,14 +4,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Admin extends CI_Controller
 {
     // public function __construct()
-	// {
-	// 	parent::__construct();
+    // {
+    // 	parent::__construct();
+    //     date_default_timezone_set("Asia/Kolkata"); //Set server date an time to Asia
 
-	// 	date_default_timezone_set("Asia/Kolkata"); //Set server date an time to Asia
-	// 	if (!isset($_SESSION['userInfo'])) {
-	// 		redirect('index');
-	// 	}
-	// }
+
+    // }
 
 
     public function index()
@@ -108,8 +106,6 @@ class Admin extends CI_Controller
     // function to edit tour packages into the database
     public function edittourpackagesPost()
     {
-
-
         if (!isset($_POST) && !isset($_FILES)) {
             $this->session->set_flashdata('error', 'fill details first');
             redirect(base_url('Admin/Administration'));
@@ -117,28 +113,38 @@ class Admin extends CI_Controller
             //     echo "<pre>";
             // print_r($_POST);
             // die;
-            $folder = upload_img($_FILES);
             $tour_id = $this->input->post('id');
-            $data = array(
-                'name' => $this->input->post('Tour_Name'),
-                'Description' => $this->input->post('description'),
-                'valid_from' => $this->input->post('valid_from'),
-                'valid_to' => $this->input->post('valid_to'),
-                'place' => $this->input->post('place'),
-                'cancellation_status' => $this->input->post('cancellation_status'),
-                'cancellation_charge' => $this->input->post('cancellation_charge'),
-                'cancellation_duraion' => $this->input->post('cancellation_duraion'),
-                'status' => $this->input->post('status'),
-                'image' => $folder
-            );
-
-            $update_result = $this->CustomModel->update_table('tour', array('id' => $tour_id), $data);
-            if ($update_result == true) {
-                $this->session->set_flashdata('success', 'Update success');
-                redirect(base_url('Admin/Administration'));
+            // $folder = upload_img($_FILES);
+            $config['upload_path'] = './upload';
+            $config['allowed_type'] = 'jpg|png|gif';
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('image')) {
+                echo 'error';
             } else {
-                $this->session->set_flashdata('error', 'error');
-                redirect(base_url('Admin/Administration'));
+                $fd = $this->upload->data();
+                $fn = $fd['file_name'];
+
+                $data = array(
+                    'name' => $this->input->post('Tour_Name'),
+                    'Description' => $this->input->post('description'),
+                    'valid_from' => $this->input->post('valid_from'),
+                    'valid_to' => $this->input->post('valid_to'),
+                    'place' => $this->input->post('place'),
+                    'cancellation_status' => $this->input->post('cancellation_status'),
+                    'cancellation_charge' => $this->input->post('cancellation_charge'),
+                    'cancellation_duraion' => $this->input->post('cancellation_duraion'),
+                    'status' => $this->input->post('status'),
+                    'image' => $fn
+                );
+
+                $update_result = $this->CustomModel->update_table('tour', array('id' => $tour_id), $data);
+                if ($update_result == true) {
+                    $this->session->set_flashdata('success', 'Update success');
+                    redirect(base_url('Admin/Administration'));
+                } else {
+                    $this->session->set_flashdata('error', 'error');
+                    redirect(base_url('Admin/Administration'));
+                }
             }
         }
     }
@@ -152,31 +158,52 @@ class Admin extends CI_Controller
         // die;
 
         if (isset($_POST) && isset($_FILES)) {
-            $folder = upload_img($_FILES);
-            $data = array(
-                'name' => $this->input->post('Tour_Name'),
-                'Description' => $this->input->post('description'),
-                'valid_from' => $this->input->post('valid_from'),
-                'valid_to' => $this->input->post('valid_to'),
-                'place' => $this->input->post('place'),
-                'cancellation_status' => $this->input->post('cancellation_status'),
-                'cancellation_charge' => $this->input->post('cancellation_charge'),
-                'cancellation_duraion' => $this->input->post('cancellation_duraion'),
-                'status' => $this->input->post('status'),
-                'image' => $folder
-            );
-            $result = $this->CustomModel->insertInto('tour', $data);
-            if (!empty($result)) {
-                // print_r($result);die;
-                $this->session->set_flashdata("success", "Tour Added.");
-                redirect(base_url('Admin/Administration'));
+
+            $config['upload_path'] = './upload';
+            $config['allowed_types'] = 'jpg|png|gif';
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('image')) {
+                // $this->session->set_flashdata('error', 'error');
+                // echo "error";
+                $error = array('error' => $this->upload->display_errors());
+                print_r($error);
             } else {
-                $this->session->set_flashdata('error', 'error');
+                $fd = $this->upload->data();
+                $fn = $fd['file_name'];
+
+                // $folder = upload_img($_FILES);
+                $data = array(
+                    'name' => $this->input->post('Tour_Name'),
+                    'Description' => $this->input->post('description'),
+                    'valid_from' => $this->input->post('valid_from'),
+                    'valid_to' => $this->input->post('valid_to'),
+                    'place' => $this->input->post('place'),
+                    'cancellation_status' => $this->input->post('cancellation_status'),
+                    'cancellation_charge' => $this->input->post('cancellation_charge'),
+                    'cancellation_duraion' => $this->input->post('cancellation_duraion'),
+                    'status' => $this->input->post('status'),
+                    'image' => $fn
+                );
+
+                $result = $this->CustomModel->insertInto('tour', $data);
+
+                if (!empty($result)) {
+                    // print_r($result);die;
+                    $this->session->set_flashdata("success", "Tour Added.");
+                    redirect(base_url('Admin/Administration'));
+                } else {
+                    $this->session->set_flashdata('error', 'error');
+                }
             }
         } else {
             $this->session->set_flashdata("error", "invalid entry");
         }
     }
+
+
+
     // function to show addactivity view
     public function addActivity()
     {
@@ -270,6 +297,7 @@ class Admin extends CI_Controller
             redirect(base_url('Admin/activity'));
         }
     }
+
     // function to show activity 
     function activity()
     {
@@ -288,42 +316,54 @@ class Admin extends CI_Controller
         // die;
 
         if (!empty($_POST) && $_FILES) {
-            $folder = upload_img($_FILES);
-            $places = $this->input->post('selectLpicup');
-            $place = json_encode($places);
 
-            $data = array(
-                'activity' => $this->input->post('Tour_Name'),
-                'inclusion' => $this->input->post('description'),
-                'usefull_information' => $this->input->post('Information'),
-                'duration' => $this->input->post('Duration'),
-                'time_slots' => $this->input->post('selectTimeSlots'),
-                'tp_id' => $this->input->post('tour_id'),
-                'tp_name' => $this->input->post('tp_name'),
-                'places' => $place,
-                'image_name' => $folder
-            );
-            $result = $this->CustomModel->insertInto('tour_activity', $data);
-            if (!empty($result)) {
+            $config['upload_path'] = './upload';
+            $config['allowed_types'] = 'jpg|png|gif';
 
-                $amt_type = array(
-                    'Adult' => $this->input->post('Adult'),
-                    'Infont' => $this->input->post('Infont'),
-                    'Child' => $this->input->post('Child')
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('file_input_Images')) {
+                $error = array('error' => $this->upload->display_errors());
+                print_r($error);
+            } else {
+                $fd = $this->upload->data();
+                $fn = $fd['file_name'];
+                $places = $this->input->post('selectLpicup');
+                $place = json_encode($places);
+
+                $data = array(
+                    'activity' => $this->input->post('Tour_Name'),
+                    'inclusion' => $this->input->post('description'),
+                    'usefull_information' => $this->input->post('Information'),
+                    'duration' => $this->input->post('Duration'),
+                    'time_slots' => $this->input->post('selectTimeSlots'),
+                    'tp_id' => $this->input->post('tour_id'),
+                    'tp_name' => $this->input->post('tp_name'),
+                    'places' => $place,
+                    'image_name' => $fn
                 );
-                $amt = json_encode($amt_type, true);
-                $price = array(
-                    'tpa_id' => $result,
-                    'amt' => $amt,
-                    'currency' => 'AED'
-                );
-                $price1 = $this->CustomModel->insertInto('price', $price);
-                if (!empty($price1)) {
-                    $this->session->set_flashdata("success", "Activity Added");
-                    redirect('Admin/activity');
-                } else {
-                    $this->session->set_flashdata("error", "Activity error");
-                    redirect('Admin/activity');
+                $result = $this->CustomModel->insertInto('tour_activity', $data);
+                if (!empty($result)) {
+
+                    $amt_type = array(
+                        'Adult' => $this->input->post('Adult'),
+                        'Infont' => $this->input->post('Infont'),
+                        'Child' => $this->input->post('Child')
+                    );
+                    $amt = json_encode($amt_type, true);
+                    $price = array(
+                        'tpa_id' => $result,
+                        'amt' => $amt,
+                        'currency' => 'AED'
+                    );
+                    $price1 = $this->CustomModel->insertInto('price', $price);
+                    if (!empty($price1)) {
+                        $this->session->set_flashdata("success", "Activity Added");
+                        redirect('Admin/activity');
+                    } else {
+                        $this->session->set_flashdata("error", "Activity error");
+                        redirect('Admin/activity');
+                    }
                 }
             }
         } else {
