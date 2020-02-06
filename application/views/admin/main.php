@@ -95,6 +95,21 @@
                                     </select>
                                 </div>
                             </div>
+                            <!-- new addon for price -->
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for='setprice' class=" form-control-label">Set Titcket Price with transfer</label></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Adult'];}?>" name="Adult" placeholder="Adult" class="form-control" required></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Child'];}?>" name="Child" placeholder="Child" class="form-control"></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Infont'];}?>" name="Infont" placeholder="Infont" class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for='setprice' class=" form-control-label">Set Titcket Price without transfer</label></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Adult'];}?>" name="Adult" placeholder="Adult" class="form-control" required></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Child'];}?>" name="Child" placeholder="Child" class="form-control"></div>
+                                <div class="col-2 col-md-3"> <input type="text" id="setprice"  value="<?php if(isset($amt)){echo $amt['Infont'];}?>" name="Infont" placeholder="Infont" class="form-control"></div>
+                            </div>
+
+
                             <div class="row form-group">
                                 <div class="col col-md-3"><label class=" form-control-label">Cancellation</label></div>
                                 <div class="col col-md-9">

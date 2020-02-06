@@ -203,77 +203,126 @@ class Travel extends CI_Controller
 
 	function addToCart()
 	{
-
+		// echo '<pre>';
 		// print_r($_POST);
 		// die;
+		$result=$this->CustomModel->selectAllFromWhere('tour', array('id' => $this->input->post('tour_id')));
+		$transfer_type='';
+		if($this->input->post('transfer_type')=='1'){
+			$transfer_type=$result[0]['p_with_transfer'];
+		}else if($this->input->post('transfer_type')=='2'){
+			$transfer_type=$result[0]['p_without_transfer'];
+		}
+
 		$this->load->library('cart');
+		// $data = array(
+		// 	'id' => $this->input->post('tour_id'),
+		// 	'name' => $this->input->post('tour_name'),
+		// 	'qty' => $this->input->post('total_ticket'),
+		// 	'price' => $this->input->post('ticket_booking_amount'),
+		// 	'option' => array(
+		// 		'booking_date' => $this->input->post('booking_date'),
+		// 		'transfer_type' => $this->input->post('transfer_type'),
+		// 		'adult' => $this->input->post('total_adult'),
+		// 		'child' => $this->input->post('total_child'),
+		// 		'selected_activity' => $this->input->post('selectedActivities')
+		// 	)
+		// );
+
 		$data = array(
 			'id' => $this->input->post('tour_id'),
 			'name' => $this->input->post('tour_name'),
 			'qty' => $this->input->post('total_ticket'),
+			'quantity' => $this->input->post('total_ticket'),
 			'price' => $this->input->post('ticket_booking_amount'),
-			'option' => array(
-				'booking_date' => $this->input->post('booking_date'),
-				'transfer_type' => $this->input->post('transfer_type'),
-				'adult' => $this->input->post('total_adult'),
-				'child' => $this->input->post('total_child'),
-				'selected_activity' => $this->input->post('selectedActivities')
-			)
+			'tour_price' => $this->input->post('ticket_booking_amount'),
+			'grand_total' => $this->input->post('ticket_booking_amount'),
+			'booking_date' => $this->input->post('booking_date'),
+			'transfer_type' => $transfer_type,
+			'adult' => $this->input->post('total_adult'),
+			'child' => $this->input->post('total_child'),
+			'selected_activity' => $this->input->post('selectedActivities')
 		);
-
 		$this->cart->insert($data);
-	
+
 
 		// $_POST
 		// $result=$this->CustomModel->selectAllFromWhere('tour',array('id'=>$id));
 		// print_r($_POST);die;
 	}
 
-	function view()
-	{
-		$this->load->library('cart');
-		$output = '';
-		$output .= '<div align="right">
-		<button id="button" id="clear_cart" class="btn btn-warning">Clear cart</button>
-		</div>
-		</br>
-		<table class="table table-bordered">
-		<tr style="color:black">
-		<th>id</th>
-		<th>Tour Name</th>
-		<th>tickets</th>
-		<th>Price</th>
-		<th>Action</th>
-		</tr>
-		';
-		$count = 0;
-		foreach ($this->cart->contents() as $items) {
-			$count++;
-			$output .= '
-			<tr style="color:black">
-				<td>' . $items["id"] . '</td>
-				<td>' . $items["name"] . '</td>
-				<td>' . $items["qty"] . '</td>
-				<td>' . $items["subtotal"] . '</td>
-				<td> <button type="button" name="remove" class="btn btn-danger  btn-center btn-xs remove_inventory" id="' . $items["rowid"] . '">Remove</button></td>
-			<tr>
-			';
+	// function view()
+	// {
+	// 	//  echo "<pre>";
+	// 	//  print_r($this->cart->contents());
+	// 	//  die;
+		
+	// 	$output = '';
+	// 	$output .= '<div class="conatiner">
+	// 	<table class="table table-bordered">
+	// 	<tr style="color:black">
+	// 	<th></th>
+	// 	<th>Date</th>
+	// 	<th>Tour Name</th>
+	// 	<th>tickets</th>
+	// 	<th>Adult</th>
+	// 	<th>Child</th>
+	// 	<th>Price</th>
+	// 	<th>Action</th>
+	// 	</tr>
+	// 	';
+	// 	$count1 = 0;
+	// 	$count2 = 0;
+	// 	$grandTotal = 0;
+		
+	// 	foreach ($this->cart->contents() as $items) {
+	// 		// // echo "<pre>";
+	// 		// print_r($items);
+		
+	// 		$count1++;
+	// 		$output .= '
+	// 		<tr style="color:black">
+	// 			<td>' . $items["id"] . '</td>
+	// 			<td>' . $items["booking_date"] . '</td>
+	// 			<td>' . $items["name"] . '</td>
+	// 			<td>' . $items["quantity"] . '</td>
+	// 			<td>' . $items["adult"]. '</td>
+	// 			<td>' . $items["child"]. '</td>
+	// 			<td>' . $items["grand_total"] . '</td>
+	// 			<td> <button type="button" name="remove" class="btn btn-danger remove_inventory" id="' . $items["rowid"] . '">Remove</button></td>
+	// 		';
+	// 		foreach( $items["selected_activity"] as $activity){
+	// 			$count2++;
+	// 			$output .= '
+	// 			<table>
+	// 		<tr style="margin-left:50px;">
+	// 		<td></td>
+	// 			<td>' .$activity["activity"]. '</td>
+	// 		</tr>
+	// 		';
+	// 		}
+	// 		$output.='</table>';
+			
+	// 		$grandTotal +=$items["grand_total"];
+	// 		return $output;
+	// 	}
 
-			$output .= '
-			<tr style="color:black">
-			 <td colspan="4" align="right">Total</td>
-			 <td>' . $this->cart->total() . '</td>
-			</tr>
-		   </table>
-		   </div>
-		   ';
+	// 	$output .= '
+	// 	<tr style="color:black">
+	// 	 <td colspan="7" align="right">Total</td>
+	// 	 <td>' . $grandTotal . '</td>
+	// 	</tr>
+	//    </table>
+	//    </div>
+	//    ';
 
-			if ($count == 0) {
-				$output = '<h3 align="center">Cart is Empty</h3>';
-			}
-			return $output;
-		}
-	}
+	// 		if ($count1 == 0) {
+	// 			$output = '<h3 align="center">Cart is Empty</h3>';
+	// 		}
+
+	// 	return $output;
+			
+	// }
 
 	function remove()
 	{
@@ -292,17 +341,17 @@ class Travel extends CI_Controller
 		$this->cart->destroy();
 		echo $this->view();
 	}
+
 	function billingCart()
 	{
 		// $this->load->library('cart');
 		$data['country'] = $this->CustomModel->selectAll('country', 'name');
-		$data['cart'] = $this->view();
-		// echo '<pre>';
-		// print_r($this->cart->contents());die;
+		$data['cart'] =  $this->cart->contents();
 		$this->load->view('travels/layout/header');
 		$this->load->view('travels/activity/billingCart', $data);
 		$this->load->view('travels/layout/footer');
 	}
+
 
 	public function getTourNecessaryDetails($tourId)
 	{

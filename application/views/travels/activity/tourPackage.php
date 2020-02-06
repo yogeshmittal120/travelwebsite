@@ -349,11 +349,11 @@
             url: base_url + 'Travel/getActivityNecessaryDetails',
             data: formData,
             success: function(data, success) {
-                if(data!='false'){
-                activities = JSON.parse(data);
-              
-                loadActivites(activities );
-                }else{
+                if (data != 'false') {
+                    activities = JSON.parse(data);
+
+                    loadActivites(activities);
+                } else {
                     $('.div_activities').hide();
                 }
                 transfer.change();
@@ -366,7 +366,11 @@
                     return true
                 }
             }
+
             let act = activities.filter(selectedItem)
+
+            console.log(act);
+
             let transfer = $('#transfer').val().trim();
             let adult = $('#adult_number').val().trim();
             let child = $('#child_number').val().trim();
@@ -375,6 +379,7 @@
             let total_ticket_amount = $('#totalPrice').text().trim();
             let tour_name = $('#tour-name').text().trim();
             let tickets = parseInt(adult) + parseInt(child);
+            // let tour_id=[], tour_name=[];
 
             let formData = {
                 transfer_type: transfer,
@@ -387,16 +392,18 @@
                 tour_name: tour_name,
                 selectedActivities: act
             }
-            $.ajax({
-                type: "POST",
-                url: base_url + 'Travel/addToCart',
-                data: formData,
-                success: function(data, success) {
-                    // alert(data);
-                    window.location = base_url + 'Travel/billingCart'
+            // console.log(formData)
+            // $.ajax({
+            //     type: "POST",
+            //     url: base_url + 'Travel/addToCart',
+            //     data: formData,
+            //     success: function(data, success) {
+            //         // // alert(data);
+            //         // console.log(data);
+            //         // window.location = base_url + 'Travel/billingCart'
 
-                },
-            });
+            //     },
+            // });
 
         });
 
